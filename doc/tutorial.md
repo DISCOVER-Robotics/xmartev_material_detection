@@ -385,10 +385,10 @@ docker push dockerhub_name/xmartev:tagename
 
 在需要提交测试的版本时，将dockerhub用户名、docker token由比赛系统提交。
 
-![enter_account_setting](./assets/8.jpg)
+![enter_account_setting](./assets/8.png)
 
-![create_token_pos](./assets/9.jpg)
+![create_token_pos](./assets/9.png)
 
-![create_token](./assets/10.jpg)
+![create_token](./assets/10.png)
 
 ![token_created](./assets/11.jpg)
