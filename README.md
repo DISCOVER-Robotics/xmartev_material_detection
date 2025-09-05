@@ -96,28 +96,28 @@ python3 baseline_round1_seed99.py
 ## ROS2 Topic 含义
 
 ```yaml
-Published topics:
- * /clock [rosgraph_msgs/msg/Clock] 1 publisher
+Subscribed topics:
+ * /clock [rosgraph_msgs/msg/Clock] 1 subscriber
 	# 仿真时钟
- * /head_camera/aligned_depth_to_color/camera_info [sensor_msgs/msg/CameraInfo] 1 publisher
+ * /head_camera/aligned_depth_to_color/camera_info [sensor_msgs/msg/CameraInfo] 1 subscriber
  	# mmk2机器人头部深度相机 内参
- * /head_camera/aligned_depth_to_color/image_raw [sensor_msgs/msg/Image] 1 publisher
+ * /head_camera/aligned_depth_to_color/image_raw [sensor_msgs/msg/Image] 1 subscriber
  	# mmk2机器人头部相机的深度图像，和rgb图像对齐，编码格式为mono16，单位毫米
- * /head_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 publisher
+ * /head_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 subscriber
  	# mmk2机器人头部rgb相机 内参
- * /head_camera/color/image_raw [sensor_msgs/msg/Image] 1 publisher
+ * /head_camera/color/image_raw [sensor_msgs/msg/Image] 1 subscriber
  	# mmk2机器人头部相机的rgb图像，编码格式rgb8
- * /left_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 publisher
+ * /left_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 subscriber
  	# mmk2机器人左手rgb相机 内参
- * /left_camera/color/image_raw [sensor_msgs/msg/Image] 1 publisher
+ * /left_camera/color/image_raw [sensor_msgs/msg/Image] 1 subscriber
  	# mmk2机器人左侧手臂末端相机的rgb图像，编码格式rgb8
- * /right_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 publisher
+ * /right_camera/color/camera_info [sensor_msgs/msg/CameraInfo] 1 subscriber
  	# mmk2机器人右手rgb相机 内参
- * /right_camera/color/image_raw [sensor_msgs/msg/Image] 1 publisher
+ * /right_camera/color/image_raw [sensor_msgs/msg/Image] 1 subscriber
  	# mmk2机器人右侧手臂末端相机的rgb图像，编码格式rgb8
- * /odom [nav_msgs/msg/Odometry] 1 publisher
+ * /odom [nav_msgs/msg/Odometry] 1 subscriber
  	# mmk2机器人里程计信息
- * /joint_states [sensor_msgs/msg/JointState] 1 publisher
+ * /joint_states [sensor_msgs/msg/JointState] 1 subscriber
  	# mmk2机器人全身关节状态量，顺序为 joint_names: [
     # - slide_joint
     # - head_yaw_joint
@@ -137,16 +137,16 @@ Published topics:
     # - right_arm_joint6
     # - right_arm_eef_gripper_joint ]
  
-Subscribed topics:
- * /cmd_vel [geometry_msgs/msg/Twist] 1 subscriber
+Published topics:
+ * /cmd_vel [geometry_msgs/msg/Twist] 1 publisher
  	# 控制mmk2底盘移动
- * /head_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 subscriber
+ * /head_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 publisher
  	# 控制mmk2头部移动
- * /left_arm_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 subscriber
+ * /left_arm_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 publisher
  	# 控制mmk2左臂移动
- * /right_arm_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 subscriber
+ * /right_arm_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 publisher
  	# 控制mmk2右臂移动
- * /spine_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 subscriber
+ * /spine_forward_position_controller/commands [std_msgs/msg/Float64MultiArray] 1 publisher
  	# 控制mmk2升降移动
 ```
 
