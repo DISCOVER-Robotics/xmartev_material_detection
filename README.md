@@ -289,7 +289,7 @@ bash exec_server.sh
 ```bash
 docker start xmartev_material_detection
 ```
-### 部署
+## 部署
 
 ### 1. 拉取client镜像
 
