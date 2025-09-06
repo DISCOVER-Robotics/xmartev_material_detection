@@ -259,7 +259,36 @@ sudo systemctl restart docker
 ```bash
 docker login
 ```
+#### 从docker hub拉取镜像
 
+```bash
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:dev_v1.0
+```
+### Run server container
+
+打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
+
+![image-20250220193041501](doc/assets/servername.png)
+
+创建server container：
+
+```bash
+cd xmartev_material_detection/scripts
+bash create_container_server.sh
+```
+
+终端中进入server container：
+
+```bash
+cd xmartev_material_detection/scripts
+bash exec_server.sh
+```
+
+电脑重启后，需要重新启动容器
+
+```bash
+docker start xmartev_material_detection
+```
 ### 部署
 
 ### 1. 拉取client镜像
@@ -334,36 +363,7 @@ docker exec -it meterial_detection_baseline bash
    ```
 
 ## Material Detection Baseline 使用
-#### 从docker hub拉取镜像
 
-```bash
-docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:dev_v1.0
-```
-### Run server container
-
-打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
-
-![image-20250220193041501](doc/assets/servername.png)
-
-创建server container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash create_container_server.sh
-```
-
-终端中进入server container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash exec_server.sh
-```
-
-电脑重启后，需要重新启动容器
-
-```bash
-docker start xmartev_material_detection
-```
 ### 1. 进入工作目录
 
 ```bash
