@@ -260,7 +260,7 @@ sudo systemctl restart docker
 docker login
 ```
 
-##部署
+### 部署
 
 ### 1. 拉取client镜像
 
@@ -269,7 +269,7 @@ docker login
 docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_client:dev_v1.0
 
 
-# 查看是否成功获取 discoverse/material_detection 镜像
+# 查看是否成功获取 material_detection_client 镜像
 docker images
 ```
 
@@ -443,20 +443,6 @@ Published topics:
    - 检查宿主机和容器内的`ROS_DOMAIN_ID`是否一致
    - 确认已正确安装并配置`rmw_cyclonedds_cpp`中间件
    - 检查网络连接和防火墙设置
-
-
-### Build server
-
-环境依赖：
-
-+   ubuntu >= 20.04
-+   cuda >= 11.8
-+   显存 >= 6GB
-+   空余硬盘空间 >= 80G
-
-
-
-
 
 
 
