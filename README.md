@@ -201,12 +201,16 @@ elif self.stm.state_idx == 新状态:
 
 ## Installation
 
-###安装git
+### 安装git
 
 打开终端输入
 ```
 sudo apt update
 sudo apt install git -y
+```
+终端输入下面命令git clone到本地
+```
+git clone https://github.com/DISCOVER-Robotics/xmartev_block_challenge.git
 ```
 ### 安装docker
 
@@ -248,7 +252,7 @@ sudo systemctl restart docker
 ### 注册 dockerhub
 
 注册dockerhub账号：[dockerhub](https://hub.docker.com/)
-具体注册流程请看：[dockerhub注册】（https://docs.docker.com/accounts/create-account/）
+具体注册流程请看：[dockerhub注册]（https://docs.docker.com/accounts/create-account/）
 
 登录dockerhub账号
 
@@ -258,14 +262,12 @@ docker login
 
 ##部署
 
-### 1. 拉取镜像
+### 1. 拉取client镜像
 
 ```bash
-# 从镜像仓库拉取（待补充镜像地址）
+# 从镜像仓库拉取
 docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_client:dev_v1.0
 
-# 或从本地tar包加载镜像
-docker load -i [镜像tar包路径]
 
 # 查看是否成功获取 discoverse/material_detection 镜像
 docker images
