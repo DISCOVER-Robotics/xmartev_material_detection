@@ -126,14 +126,14 @@ docker pull xmartev/material_detaction_client:release_v0
 创建client container：
 
 ```bash
-cd xmartev_block_challenge/scripts
+cd xmartev_material_detection/scripts
 bash create_container_client.sh
 ```
 
 终端中进入client container：
 
 ```bash
-cd xmartev_block_challenge/scripts
+cd xmartev_material_detection/scripts
 bash exec_client.sh
 ```
 
