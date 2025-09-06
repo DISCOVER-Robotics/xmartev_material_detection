@@ -108,7 +108,7 @@ python3 s2r_server.py --round_id 1
 
 ### Build client
 
-和server一样，选手可以通过直接拉取远程镜像或使用docker file构建两种方式来在本地构建client docker镜像。
+本地构建client docker镜像。
 
 #### 从 docker hub 拉取镜像 
 
@@ -116,14 +116,6 @@ python3 s2r_server.py --round_id 1
 docker pull xmartev/material_detaction_client:release_v0
 ```
 
-#### 从docker file本地构建镜像
-
->   ❗️ <YOUR-TEAM-NAME>:<TAG>要替换成参赛队伍名和TAG，例如 `team_A:v1`
-
-```bash
-cd xmartev_material_detection/docker
-docker build -f Dockerfile.client -t <YOUR-TEAM-NAME>:<TAG> .
-```
 
 ### Run client container
 
