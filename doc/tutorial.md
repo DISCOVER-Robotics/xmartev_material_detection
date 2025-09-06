@@ -68,7 +68,7 @@ docker pull xmartev/material_detaction_server:release_v0
 
 打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
 
-![image-20250220193041501](./assets/image-20250220193041501.png)
+![image-20250220193041501](./assets/bash2.png)
 
 创建server container：
 
@@ -129,7 +129,7 @@ docker build -f Dockerfile.client -t <YOUR-TEAM-NAME>:<TAG> .
 
 打开`create_container_client.sh`并修改镜像 和 tag名称
 
-![image-20250220211718735](./assets/2.png)
+![image-20250220211718735](./assets/bash1.png)
 
 创建client container：
 
