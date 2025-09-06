@@ -425,7 +425,7 @@ docker pull xmartev/material_detection_server:release_v0
 
 打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
 
-![image-20250220193041501](./assets/bash2.png)
+![image-20250220193041501](dock/assets/bash2.png)
 
 创建server container：
 
@@ -478,7 +478,7 @@ docker pull xmartev/material_detection_client:release_v0
 
 打开`create_container_client.sh`并修改镜像 和 tag名称
 
-![image-20250220211718735](./assets/bash1.png)
+![image-20250220211718735](dock/assets/bash1.png)
 
 创建client container：
 
@@ -585,9 +585,9 @@ Memory : 64GB
 
 参赛队伍在自己注册的dockerhub上新建一个private repo，名字为xmartev
 
-![create_repo](./assets/1.png)
+![create_repo](dock/assets/1.png)
 
-![alt text](./assets/2.png)
+![alt text](dock/assets/2.png)
 
 ### 2. 将client镜像push到private repo
 
@@ -595,20 +595,20 @@ Memory : 64GB
 ```
 docker tag xmartev/material_detection_client:example_tagname dockerhub_name/xmartev:tagname 
 ```
-![change_docker_tag](./assets/3.png)
+![change_docker_tag](dock/assets/3.png)
 
 将新tag的client镜像push到private repo
 ```
 docker push dockerhub_name/xmartev:tagname 
 ```
 
-![docker_push](./assets/4.png)
+![docker_push](dock/assets/4.png)
 
 ### 3. 开发比赛任务
 
 根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag
 
-![image-20250220181043385](./assets/bash.png)
+![image-20250220181043385](dock/assets/bash.png)
 
 运行create_client.sh，创建新容器。
 
@@ -625,7 +625,7 @@ docker push dockerhub_name/xmartev:tagname
 docker commit material_detection_client dockerhub_name/xmartev:new_tag
 ```
 
-![image-20250220181624907](./assets/6.png)
+![image-20250220181624907](dock/assets/6.png)
 
 ### 5. docker push
 
@@ -634,7 +634,7 @@ docker commit material_detection_client dockerhub_name/xmartev:new_tag
 docker push dockerhub_name/xmartev:tagename
 ```
 
-![image-20250220181914426](./assets/7.png)
+![image-20250220181914426](dock/assets/7.png)
 
 ### 6. 生成访问token
 
@@ -642,10 +642,10 @@ docker push dockerhub_name/xmartev:tagename
 
 在需要提交测试的版本时，将dockerhub用户名、docker token由比赛系统提交。
 
-![enter_account_setting](./assets/8.png)
+![enter_account_setting](dock/assets/8.png)
 
-![create_token_pos](./assets/9.png)
+![create_token_pos](dock/assets/9.png)
 
-![create_token](./assets/10.png)
+![create_token](dock/assets/10.png)
 
-![token_created](./assets/11.png)
+![token_created](dock/assets/11.png)
