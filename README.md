@@ -336,7 +336,7 @@ docker exec -it meterial_detection_baseline bash
 #### 从docker hub拉取server
 
 ```bash
-docker pull xmartev/material_detection_server:release_v0
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:dev_v1.0
 ```
 ### Run server container
 
