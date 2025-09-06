@@ -504,7 +504,7 @@ docker push dockerhub_name/xmartev:tagname
 
 本地保存镜像修改内容，使用原有的tag会覆盖之前tag版本的内容
 ```
-docker commit material_detection_client dockerhub_name/xmartev:new_tag
+docker commit container_name dockerhub_name/xmartev:new_tag
 ```
 
 ![image-20250220181624907](doc/assets/6.png)
