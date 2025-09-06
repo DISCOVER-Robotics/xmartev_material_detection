@@ -284,25 +284,7 @@ bash create_container_client.sh
 docker ps
 ```
 
-Run client container
 
-打开`create_container_client.sh`并修改镜像 和 tag名称
-
-![image-20250220211718735](doc/assets/bash1.png)
-
-创建client container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash create_container_client.sh
-```
-
-终端中进入client container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash exec_client.sh
-```
 ### 3. 进入Docker容器
 
 ```bash
