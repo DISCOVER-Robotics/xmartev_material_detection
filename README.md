@@ -201,6 +201,13 @@ elif self.stm.state_idx == 新状态:
 
 ## Installation
 
+###安装git
+
+打开终端输入
+```
+sudo apt update
+sudo apt install git -y
+```
 ### 安装docker
 
 若本地尚未安装docker：
