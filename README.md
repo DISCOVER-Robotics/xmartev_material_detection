@@ -342,7 +342,7 @@ docker pull xmartev/material_detection_server:release_v0
 
 打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
 
-![image-20250220193041501](doc/assets/bash2.png)
+![image-20250220193041501](doc/assets/servername.png)
 
 创建server container：
 
