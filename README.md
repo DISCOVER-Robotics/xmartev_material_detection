@@ -222,7 +222,7 @@ docker --version
 
 推荐使用Software & Updates中Additional Drivers安装，创建镜像和容器前需要检查宿主机的显卡驱动是否正常。
 
-打开终端，输入nvidia-smi检查驱动是否安装成功。
+打开终端，输入nvidia-smi检查驱动是否安装成功。显示显卡信息以及驱动信息则nvidia driver安装成功。
 
 安装 nvidia-docker2
 
@@ -448,31 +448,9 @@ bash exec_server.sh
 docker start xmartev_material_detection
 ```
 
-❗️ 若后续比赛有内容更新，请进入容器中更新
 
-```bash
-cd xmartev_material_detection/scripts && bash exec_server.sh
-cd xmartev_material_detection
-git pull
-```
 
-启动比赛。进入server 容器的终端：
 
-```bash
-cd /workspace/xmartev_material_detection
-python3 s2r_server.py --round_id 1
-# round_id 为 [1、2、3] 对应比赛的轮数
-```
-
-### Build client
-
-本地构建client docker镜像。
-
-#### 从 docker hub 拉取镜像 
-
-```bash
-docker pull xmartev/material_detection_client:release_v0
-```
 
 
 ### Run client container
@@ -495,34 +473,7 @@ cd xmartev_material_detection/scripts
 bash exec_client.sh
 ```
 
-### Test ros2 communication
 
->   ❗️ <CLIENT_CONTAINER_ID>要替换成选手自己构建的client docker container的id，可用`docker ps -a`指令查询
-
-```bash
-# server --> client 通信测试
-(new terminal)
-docker exec -it s2r2025_server bash
-ros2 topic pub /server_test std_msgs/msg/String "data: 'hello from server'"
-
-(new terminal)
-docker exec -it <CLIENT_CONTAINER_ID> bash
-# 查看所有活动的topics
-ros2 topic list
-# 查看topic信息
-ros2 topic info /server_test
-# 测试订阅server发布的消息
-ros2 topic echo /server_test
-
-# client --> server 通信测试
-(new terminal)
-docker exec -it <CLIENT_CONTAINER_ID> bash
-ros2 topic pub /client_test std_msgs/msg/String "data: 'hello from client'"
-
-(new terminal)
-docker exec -it s2r2025_server bash
-# 测试订阅server发布的消息
-ros2 topic echo /client_test
 ```
 
 ## 用手柄遥控MMK2
