@@ -1,6 +1,6 @@
-docker rm -f s2r2025_client
+docker rm -f material_detection_client
 
-docker run -id --name s2r2025_client --gpus all \
+docker run -id --name material_detection_client --gpus all \
     --privileged=true \
     --network=host \
     --ipc=host \
@@ -12,7 +12,7 @@ docker run -id --name s2r2025_client --gpus all \
     -e QT_X11_NO_MITSHM=1 \
     -e NVIDIA_DRIVER_CAPABILITIES=all \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    discoverse/s2r2025_client:real_v1 bash
+    xmartev/material_detection_client:tagname bash
 
 xhost +
 
