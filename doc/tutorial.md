@@ -61,7 +61,7 @@ docker login
 #### 从docker hub拉取镜像
 
 ```bash
-docker pull xmartev/material_detaction_client:release_v0
+docker pull xmartev/material_detaction_server:release_v0
 ```
 
 
@@ -115,7 +115,7 @@ python3 s2r_server.py --round_id 1
 #### 从 docker hub 拉取镜像 
 
 ```bash
-docker pull xmartev/material_detection：release_v0
+docker pull xmartev/material_detaction_client:release_v0
 ```
 
 #### 从docker file本地构建镜像
