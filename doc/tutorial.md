@@ -49,8 +49,6 @@ docker login
 
 ### Build server
 
-我们提供了两种方案供选手在本地运行仿真环境。
-
 环境依赖：
 
 +   ubuntu >= 20.04
@@ -336,7 +334,7 @@ Memory : 64GB
 
 将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dcokerhub的账号名字
 ```
-docker tag xmartev/material_detection_client:v1.0 dockerhub_name/xmartev:tagname 
+docker tag xmartev/material_detection_client:example_tagname dockerhub_name/xmartev:tagname 
 ```
 ![change_docker_tag](./assets/3.png)
 
@@ -349,7 +347,7 @@ docker push dockerhub_name/xmartev:tagname
 
 ### 3. 开发比赛任务
 
-根据private repo和tag名字，修改create_containner_client.sh里的镜像名和tag
+根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag
 
 ![image-20250220181043385](./assets/bash.png)
 
