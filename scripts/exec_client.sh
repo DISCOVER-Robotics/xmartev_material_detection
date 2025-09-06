@@ -1,1 +1,1 @@
-docker exec -it s2r2025_client bash
+docker exec -it material_detection_client bash
