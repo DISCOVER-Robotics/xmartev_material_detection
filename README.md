@@ -223,7 +223,7 @@ docker --version
 推荐使用Software & Updates中Additional Drivers安装，创建镜像和容器前需要检查宿主机的显卡驱动是否正常。
 
 打开终端，输入nvidia-smi检查驱动是否安装成功。显示显卡信息以及驱动信息则nvidia driver安装成功。
-
+![image-20250220193041501](doc/assets/nvidiasmi.png)
 安装 nvidia-docker2
 
 ```bash
