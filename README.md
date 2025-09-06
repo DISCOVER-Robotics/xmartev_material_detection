@@ -304,11 +304,7 @@ docker images
 
 ### 2. 创建Docker容器
 
-打开create_container_client.sh并修改镜像 和 tag名称
-
-
-![image-20250220193041501](doc/assets/1757170032256.png)
-然后执行
+下载create_container_client.sh 然后执行
 ```bash
 bash create_container_client.sh
 # 查看容器是否创建成功
