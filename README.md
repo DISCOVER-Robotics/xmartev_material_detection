@@ -322,7 +322,36 @@ docker exec -it meterial_detection_baseline bash
    ```
 
 ## Material Detection Baseline 使用
+#### 从docker hub拉取镜像
 
+```bash
+docker pull xmartev/material_detection_server:release_v0
+```
+### Run server container
+
+打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
+
+![image-20250220193041501](dock/assets/bash2.png)
+
+创建server container：
+
+```bash
+cd xmartev_material_detection/scripts
+bash create_container_server.sh
+```
+
+终端中进入server container：
+
+```bash
+cd xmartev_material_detection/scripts
+bash exec_server.sh
+```
+
+电脑重启后，需要重新启动容器
+
+```bash
+docker start xmartev_material_detection
+```
 ### 1. 进入工作目录
 
 ```bash
@@ -414,39 +443,7 @@ Published topics:
 +   显存 >= 6GB
 +   空余硬盘空间 >= 80G
 
-#### 从docker hub拉取镜像
 
-```bash
-docker pull xmartev/material_detection_server:release_v0
-```
-
-
-
-### Run server container
-
-打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
-
-![image-20250220193041501](dock/assets/bash2.png)
-
-创建server container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash create_container_server.sh
-```
-
-终端中进入server container：
-
-```bash
-cd xmartev_material_detection/scripts
-bash exec_server.sh
-```
-
-电脑重启后，需要重新启动容器
-
-```bash
-docker start xmartev_material_detection
-```
 
 
 
@@ -476,47 +473,7 @@ bash exec_client.sh
 
 ```
 
-## 用手柄遥控MMK2
 
-MMK2（Mobile Manipulation Kit 2）是本次比赛使用的机器人平台，MMK2是人形升降双臂机器人的名字，以下是使用手柄操作仿真环境里的MMK2的操作指南。
-
-```bash
-(new terminal) # 启动比赛
-docker exec -it s2r2025_server bash
-cd /workspace/SIM2REAL-2025/s2r2025
-python3 s2r_server.py --round_id 1
-
-(new terminal)
-docker exec -it s2r2025_server bash
-# 需要先连接手柄
-# ls /dev/input/ | grep js
-# 如果有js0则说明已经在container中识别到了手柄
-ros2 run joy joy_node
-
-(new terminal) 
-docker exec -it s2r2025_server bash
-cd /workspace/SIM2REAL-2025/s2r2025
-# 如果是Logitech类手柄，将/workspace/SIM2REAL-2025/s2r2025/joy_control_test.py
-# line 14 `NUM_BUTTON=12` 改成 `NUM_BUTTON=11`
-python3 joy_control_test.py
-```
-
-手柄操作说明（以XBOX360为例）：
-
-+   左摇杆：控制底盘移动
-+   右摇杆：控制头部运动
-+   LT左扳机：升降提高
-+   RT右扳机：升降降低
-+   LB左肩键 （持续按下 控制左侧机械臂）：
-    +   方向键 上下：机械臂末端沿x轴平移
-    +   方向键 左右：机械臂末端沿y轴平移
-    +   左摇杆 上下：机械臂末端沿z轴平移
-    +   左摇杆 左右：机械臂末端绕z轴旋转
-    +   右摇杆 左右：机械臂末端绕x轴旋转
-    +   右摇杆 上下：机械臂末端绕y轴旋转
-    +   LT、RT：控制夹爪开合
-+   RB左肩键 （持续按下 控制右侧机械臂）：
-    +   操作逻辑同LB。LB、RB可同时按下
 
 
 
