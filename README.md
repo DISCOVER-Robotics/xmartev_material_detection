@@ -368,7 +368,7 @@ docker start xmartev_material_detection
 
 ```bash
 docker exec -it meterial_detection_baseline bash
-cd /workspace/Material Detection
+cd /workspace/material_detection
 ```
 
 ### 2. 运行baseline
