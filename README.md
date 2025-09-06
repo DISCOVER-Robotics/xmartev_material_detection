@@ -334,7 +334,7 @@ docker exec -it meterial_detection_baseline bash
    ```
 
 ## Material Detection Baseline 使用
-#### 从docker hub拉取server
+#### 从docker hub拉取镜像
 
 ```bash
 docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:dev_v1.0
