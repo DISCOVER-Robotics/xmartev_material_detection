@@ -391,4 +391,4 @@ docker push dockerhub_name/xmartev:tagename
 
 ![create_token](./assets/10.png)
 
-![token_created](./assets/11.jpg)
+![token_created](./assets/11.png)
