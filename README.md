@@ -241,6 +241,7 @@ sudo systemctl restart docker
 ### 注册 dockerhub
 
 注册dockerhub账号：[dockerhub](https://hub.docker.com/)
+具体注册流程请看：[dockerhub注册】（https://docs.docker.com/accounts/create-account/）
 
 登录dockerhub账号
 
