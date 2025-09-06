@@ -5,7 +5,7 @@
 若本地尚未安装docker：
 
 ```bash
-cd xmartev_block_challenge/scripts
+cd xmartev_material_detection/scripts
 bash docker_install.sh
 ```
 
@@ -61,7 +61,7 @@ docker login
 #### 从docker hub拉取镜像
 
 ```bash
-docker pull discoverse/s2r2025_server:v1.0
+docker pull xmartev/material_detaction_client:release_v0
 ```
 
 
@@ -75,35 +75,35 @@ docker pull discoverse/s2r2025_server:v1.0
 创建server container：
 
 ```bash
-cd xmartev_block_challenge/scripts
+cd xmartev_material_detection/scripts
 bash create_container_server.sh
 ```
 
 终端中进入server container：
 
 ```bash
-cd xmartev_block_challenge/scripts
+cd xmartev_material_detection/scripts
 bash exec_server.sh
 ```
 
 电脑重启后，需要重新启动容器
 
 ```bash
-docker start xmartev_block_challenge
+docker start xmartev_material_detection
 ```
 
 ❗️ 若后续比赛有内容更新，请进入容器中更新
 
 ```bash
-cd xmartev_block_challenge/scripts && bash exec_server.sh
-cd xmartev_block_challenge
+cd xmartev_material_detection/scripts && bash exec_server.sh
+cd xmartev_material_detection
 git pull
 ```
 
 启动比赛。进入server 容器的终端：
 
 ```bash
-cd /workspace/xmartev_block_challenge/s2r2025
+cd /workspace/xmartev_material_detection
 python3 s2r_server.py --round_id 1
 # round_id 为 [1、2、3] 对应比赛的轮数
 ```
@@ -115,7 +115,7 @@ python3 s2r_server.py --round_id 1
 #### 从 docker hub 拉取镜像 
 
 ```bash
-docker pull discoverse/
+docker pull xmartev/material_detection：release_v0
 ```
 
 #### 从docker file本地构建镜像
@@ -123,7 +123,7 @@ docker pull discoverse/
 >   ❗️ <YOUR-TEAM-NAME>:<TAG>要替换成参赛队伍名和TAG，例如 `team_A:v1`
 
 ```bash
-cd S2R_ws/xmartev_block_challenge/docker
+cd xmartev_material_detection/docker
 docker build -f Dockerfile.client -t <YOUR-TEAM-NAME>:<TAG> .
 ```
 
@@ -336,7 +336,7 @@ Memory : 64GB
 
 将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dcokerhub的账号名字
 ```
-docker tag xmartev/block_challenge_client:v1.0 dockerhub_name/xmartev:tagname 
+docker tag xmartev/material_detection_client:v1.0 dockerhub_name/xmartev:tagname 
 ```
 ![change_docker_tag](./assets/3.png)
 
@@ -365,7 +365,7 @@ docker push dockerhub_name/xmartev:tagname
 
 本地保存镜像修改内容，使用原有的tag会覆盖之前tag版本的内容
 ```
-docker commit block_challenge_client dockerhub_name/xmartev:new_tag
+docker commit material_detection_client dockerhub_name/xmartev:new_tag
 ```
 
 ![image-20250220181624907](./assets/6.png)
