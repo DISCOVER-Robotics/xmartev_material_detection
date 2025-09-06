@@ -307,7 +307,7 @@ docker images
 打开create_container_client.sh并修改镜像 和 tag名称
 
 
-![image-20250220193041501](doc/assets/170032256.png)
+![image-20250220193041501](doc/assets/1757170032256.png)
 然后执行
 ```bash
 bash create_container_client.sh
