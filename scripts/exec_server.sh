@@ -1,1 +1,1 @@
-docker exec -it s2r2025_server bash
+docker exec -it material_detection_server bash
