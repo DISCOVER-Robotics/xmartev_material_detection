@@ -247,7 +247,8 @@ sudo systemctl restart docker
 ```bash
 docker login
 ```
-#部署
+
+##部署
 
 ### 1. 拉取镜像
 
@@ -322,7 +323,7 @@ docker exec -it meterial_detection_baseline bash
    ```
 
 ## Material Detection Baseline 使用
-#### 从docker hub拉取镜像
+#### 从docker hub拉取server
 
 ```bash
 docker pull xmartev/material_detection_server:release_v0
@@ -331,7 +332,7 @@ docker pull xmartev/material_detection_server:release_v0
 
 打开`scripts/create_container_server.sh`并修改镜像 和 tag名称
 
-![image-20250220193041501](dock/assets/bash2.png)
+![image-20250220193041501](doc/assets/bash2.png)
 
 创建server container：
 
