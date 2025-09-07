@@ -300,6 +300,11 @@ Memory : 64GB
 docker login -u <dockerhub_name>
 ```
 将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dcokerhub的账号名字
+可以先用下面命令查看本地client_name是否存在:
+
+```
+docker images | grep client_name
+```
 ```
 docker tag xmartev/material_detection_client:example_tagname dockerhub_name/xmartev:tagname 
 ```
