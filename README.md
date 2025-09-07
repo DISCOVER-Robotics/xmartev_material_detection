@@ -268,15 +268,6 @@ Published topics:
  	# 控制mmk2升降移动
 ```
 
-## 常见问题(FAQ)
-
-1. 运行baseline时出现特定错误提示，提示需要启动server端
-   - 解决方案：请确保已正确启动对应的server端服务，再重新运行baseline程序
-
-2. ROS2通信失败
-   - 检查宿主机和容器内的`ROS_DOMAIN_ID`是否一致
-   - 确认已正确安装并配置`rmw_cyclonedds_cpp`中间件
-   - 检查网络连接和防火墙设置
 
 
 
@@ -284,9 +275,7 @@ Published topics:
 
 
 
-
-
-## 完成开发后上传client镜像
+# 完成开发后上传client镜像
 
 选手在client中开发算法，开发完成后打包上传至docker hub，由官方拉取后进行测试，测试使用电脑配置为：
 
