@@ -119,7 +119,7 @@ bash exec_server.sh
 ```bash
 docker start material_detection_server
 ```
-## 部署
+## client部署指南
 
 ### 1. 拉取client镜像
 ```bash
