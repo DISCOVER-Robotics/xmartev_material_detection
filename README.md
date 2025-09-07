@@ -122,14 +122,16 @@ docker start material_detection_server
 ## 部署
 
 ### 1. 拉取client镜像
-
 ```bash
 # 从镜像仓库拉取
-docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_client:dev_v1.0
+docker pull xmartev/material_detection_client:release_v0
 
+# 如果因为网络问题拉取失败，提供了国内的镜像仓库
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_client:release_v0
 
-# 查看是否成功获取 material_detection_client 镜像
-docker images
+# 查看是否成功获取 xmartev/material_detection_client 镜像，如果有输出则说明成功拉取到本地
+docker images | grep material_detection_client
+
 ```
 
 ### 2. 创建Docker容器
