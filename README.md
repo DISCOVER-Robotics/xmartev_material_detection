@@ -150,7 +150,8 @@ docker ps
 ### 3. 进入Docker容器
 
 ```bash
-docker exec -it meterial_detection_baseline bash
+cd xmartev_material_detection/scripts
+bash exec_client.sh
 ```
 
 ### 4. 验证ROS2通信
