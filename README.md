@@ -201,8 +201,8 @@ bash exec_client.sh
 ### 1. 进入工作目录
 
 ```bash
-docker exec -it meterial_detection_baseline bash
-cd /workspace/material_detection
+docker exec -it meterial_detection_client bash
+cd /workspace/material_detection_client
 ```
 
 ### 2. 运行baseline
@@ -269,7 +269,7 @@ Published topics:
  	# 控制mmk2升降移动
 ```
 
-
+关于baseline进一步的说明，请参考
 
 
 
