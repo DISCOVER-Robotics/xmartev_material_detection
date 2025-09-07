@@ -314,7 +314,7 @@ docker push dockerhub_name/xmartev:tagname
 
 ### 3. 开发比赛任务
 
-根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag
+根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag,这里第三航的material_detection_client是container_name
 
 ![image-20250220181043385](doc/assets/bash.png)
 
@@ -335,7 +335,7 @@ docker commit container_name dockerhub_name/xmartev:new_tag
 
 ![image-20250220181624907](doc/assets/6.png)
 
-### 5. docker push
+### 5. docker push（推送新镜像）
 
 通过docker push到private repo保存当前docker镜像到dockerhub
 ```
@@ -347,7 +347,8 @@ docker push dockerhub_name/xmartev:tagename
 ### 6. 生成访问 Token（用于评测拉取）
 
 参考连接：[docker token](https://docs.docker.com/docker-hub/access-tokens/)
-
+>   非常重要：在需要提交测试的版本时，选手需要将自己的dockerhub用户名、docker token 和 镜像的tag由比赛系统提交。以下为生成docker token的指南。
+>
 在需要提交测试的版本时，将dockerhub用户名、docker token由比赛系统提交。
 
 ![enter_account_setting](doc/assets/8.png)
