@@ -98,7 +98,7 @@ docker images | grep material_detection_server
 
 打开[`scripts/create_container_server.sh`](scripts/create_container_server.sh)并修改镜像 和 tag名称（tag名称以最新的版本为准），如果使用国内镜像源拉取，则需要将第15行的`xmartev/`修改成`crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/`
 
-![alt text](doc/readme_assets/create_container_server.png)
+![alt text](doc/readme_assets/20250907-072228.jpg)
 
 创建server container：
 
@@ -135,8 +135,10 @@ docker images | grep material_detection_client
 ```
 
 ### 2. 创建Docker容器
+打开scripts/create_container_client.sh并修改镜像 和 tag名称，tagexample_tag需要修改为实际的最新tag，如果是从国内镜像源拉取，第15行的xmartev/需要修改为国内镜像源名称，例如crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/
 
-下载create_container_client.sh 然后执行
+ ![alt text](doc/readme_assets/20250907-072220.jpg)
+ 然后执行
 ```bash
 bash create_container_client.sh
 # 查看容器是否创建成功
