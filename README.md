@@ -277,7 +277,7 @@ Published topics:
 
 # 完成开发后上传client镜像
 
-选手在client中开发算法，开发完成后打包上传至docker hub，由官方拉取后进行测试，测试使用电脑配置为：
+选手在client中开发算法，开发完成后打包上传至docker hub，并打上tag，由官方拉取后进行测试，测试使用电脑配置为：
 
 ```
 cpu : 13th Gen Intel Core i7013700KF x24
