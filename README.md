@@ -45,7 +45,7 @@ docker --version
 
 打开终端，输入nvidia-smi检查驱动是否安装成功。
 出现显卡信息和驱动版本信息即为安装成功。
-![image-2025022019304150341](doc/readme_readme_assets/nvidiasmi.png)
+![image-2025022019304150341](doc/readme_assets/nvidiasmi.png)
 
 ### 4.安装 nvidia-docker2
 
@@ -98,7 +98,7 @@ docker images | grep material_detection_server
 
 打开[`scripts/create_container_server.sh`](scripts/create_container_server.sh)并修改镜像 和 tag名称（tag名称以最新的版本为准），如果使用国内镜像源拉取，则需要将第15行的`xmartev/`修改成`crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/`
 
-![alt text](doc/readme_assets/20250907-072228.jpg)
+![alt text](doc/assets/20250907-072228.jpg)
 
 创建server container：
 
@@ -137,7 +137,7 @@ docker images | grep material_detection_client
 ### 2. 创建Docker容器
 打开scripts/create_container_client.sh并修改镜像 和 tag名称，tagexample_tag需要修改为实际的最新tag，如按照上面的版本tagname改为release_v0，如果是从国内镜像源拉取，第15行的xmartev/需要修改为国内镜像源名称，例如crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/
 
- ![alt text](doc/readme_assets/20250907-072220.jpg)
+ ![alt text](doc/assets/20250907-072220.jpg)
 
 然后执行
 ```bash
@@ -300,9 +300,9 @@ Memory : 64GB
 
 参赛队伍在自己注册的dockerhub上新建一个private repo，名字为xmartev
 
-![create_repo](doc/readme_assets/1.png)
+![create_repo](doc/assets/1.png)
 
-![alt text](doc/readme_assets/2.png)
+![alt text](doc/assets/2.png)
 
 ### 2. 将client镜像push到private repo
 
@@ -310,20 +310,20 @@ Memory : 64GB
 ```
 docker tag xmartev/material_detection_client:example_tagname dockerhub_name/xmartev:tagname 
 ```
-![change_docker_tag](doc/readme_assets/3.png)
+![change_docker_tag](doc/assets/3.png)
 
 将新tag的client镜像push到private repo
 ```
 docker push dockerhub_name/xmartev:tagname 
 ```
 
-![docker_push](doc/readme_assets/4.png)
+![docker_push](doc/assets/4.png)
 
 ### 3. 开发比赛任务
 
 根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag
 
-![image-20250220181043385](doc/readme_assets/bash.png)
+![image-20250220181043385](doc/assets/bash.png)
 
 运行create_client.sh，创建新容器。
 
@@ -340,7 +340,7 @@ docker push dockerhub_name/xmartev:tagname
 docker commit container_name dockerhub_name/xmartev:new_tag
 ```
 
-![image-20250220181624907](doc/readme_assets/6.png)
+![image-20250220181624907](doc/assets/6.png)
 
 ### 5. docker push
 
@@ -349,7 +349,7 @@ docker commit container_name dockerhub_name/xmartev:new_tag
 docker push dockerhub_name/xmartev:tagename
 ```
 
-![image-20250220181914426](doc/readme_assets/7.png)
+![image-20250220181914426](doc/assets/7.png)
 
 ### 6. 生成访问token
 
@@ -357,10 +357,10 @@ docker push dockerhub_name/xmartev:tagename
 
 在需要提交测试的版本时，将dockerhub用户名、docker token由比赛系统提交。
 
-![enter_account_setting](doc/readme_assets/8.png)
+![enter_account_setting](doc/assets/8.png)
 
-![create_token_pos](doc/readme_assets/9.png)
+![create_token_pos](doc/assets/9.png)
 
-![create_token](doc/readme_assets/10.png)
+![create_token](doc/assets/10.png)
 
-![token_created](doc/readme_assets/11.png)
+![token_created](doc/assets/11.png)
