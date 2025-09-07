@@ -286,7 +286,7 @@ gpu : GeForce RTX 4090 24G
 Memory : 64GB
 ```
 
-### 1. 新建privtate repo
+### 1. 新建private repo
 
 参赛队伍在自己注册的dockerhub上新建一个private repo，名字为xmartev
 
@@ -296,11 +296,11 @@ Memory : 64GB
 
 ### 2. 将client镜像push到private repo
 
-先登录：
+先登录,终端输入
 ```
 docker login -u <dockerhub_name>
 ```
-将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dcokerhub的账号名字
+将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dockerhub的账号名字
 可以先用下面命令查看本地client_name是否存在:
 
 ```
@@ -355,7 +355,6 @@ docker push dockerhub_name/xmartev:tagename
 参考连接：[docker token](https://docs.docker.com/docker-hub/access-tokens/)
 >   非常重要：在需要提交测试的版本时，选手需要将自己的dockerhub用户名、docker token 和 镜像的tag由比赛系统提交。以下为生成docker token的指南。
 >
-在需要提交测试的版本时，将dockerhub用户名、docker token由比赛系统提交。
 
 ![enter_account_setting](doc/assets/8.png)
 
