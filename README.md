@@ -295,6 +295,10 @@ Memory : 64GB
 
 ### 2. 将client镜像push到private repo
 
+先登录：
+```
+docker login -u <dockerhub_name>
+```
 将client镜像打上tag(tag名称，参赛队伍可以自定义)，dockerhub_name为dcokerhub的账号名字
 ```
 docker tag xmartev/material_detection_client:example_tagname dockerhub_name/xmartev:tagname 
@@ -322,9 +326,9 @@ docker push dockerhub_name/xmartev:tagname
 
 在 Docker 环境中，您也可以通过 Visual Studio Code（VS Code）安装docker插件 进行高效开发。
 
-### 4. docker commit
+### 4. 使用 docker commit 保存容器内修改
 
-本地保存镜像修改内容，使用原有的tag会覆盖之前tag版本的内容
+本地保存镜像修改内容，使用原有的tag会覆盖之前tag版本的内容，如这里我们的container_name为material_detection_client,dockerhub_name为自己docker hub的名字。
 ```
 docker commit container_name dockerhub_name/xmartev:new_tag
 ```
@@ -340,7 +344,7 @@ docker push dockerhub_name/xmartev:tagename
 
 ![image-20250220181914426](doc/assets/7.png)
 
-### 6. 生成访问token
+### 6. 生成访问 Token（用于评测拉取）
 
 参考连接：[docker token](https://docs.docker.com/docker-hub/access-tokens/)
 
