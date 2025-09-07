@@ -135,7 +135,7 @@ docker images | grep material_detection_client
 ```
 
 ### 2. 创建Docker容器
-打开scripts/create_container_client.sh并修改镜像 和 tag名称，tagexample_tag需要修改为实际的最新tag，如果是从国内镜像源拉取，第15行的xmartev/需要修改为国内镜像源名称，例如crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/
+打开scripts/create_container_client.sh并修改镜像 和 tag名称，tagexample_tag需要修改为实际的最新tag，如按照上面的版本tagname改为release_v0，如果是从国内镜像源拉取，第15行的xmartev/需要修改为国内镜像源名称，例如crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/
 
  ![alt text](doc/assets/20250907-072220.jpg)
 
