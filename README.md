@@ -50,24 +50,12 @@ docker --version
 ### 4.安装 nvidia-docker2
 
 ```bash
-# 1) 启用 Docker
-sudo systemctl enable --now docker
-
-# 2) 添加 NVIDIA Container Toolkit 源（使用 keyring，避免 apt-key）
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
- | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
-
-curl -fsSL https://nvidia.github.io/libnvidia-container/stable/$distribution/libnvidia-container.list \
- | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
- | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
-
-# 3) 让 Docker 使用 NVIDIA 运行时（可设为默认）
-sudo nvidia-ctk runtime configure --runtime=docker --set-as-default
-sudo systemctl restart docker
+sudo apt-get install nvidia-docker2
+sudo systemctl restart docker.service
 
 ```
 
