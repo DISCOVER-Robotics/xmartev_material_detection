@@ -332,7 +332,7 @@ docker ps
 docker commit container_name dockerhub_name/xmartev:new_tag
 ```
 
-![image-20250220181624907](doc/assets/6.png)
+![image-20250220181624907](doc/assets/zz.png)
 
 ### 5. docker push（推送新镜像）
 
