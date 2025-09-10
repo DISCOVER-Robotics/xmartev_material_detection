@@ -27,7 +27,7 @@ cd xmartev_material_detection
 若本地尚未安装docker：
 
 ```bash
-cd xmartev_material_detection/scripts
+cd scripts
 bash docker_install.sh
 ```
 
@@ -103,9 +103,8 @@ bash create_container_server.sh
 ```
 
 终端中进入server container：
-
+同目录下（xmartev_material_detection/scripts）运行
 ```bash
-cd xmartev_material_detection/scripts
 bash exec_server.sh
 ```
 
@@ -134,11 +133,11 @@ docker images | grep material_detection_client
 
  ![alt text](doc/assets/bb.png)
 
-然后执行
+然后同目录下（xmartev_material_detection/scripts）运行
 ```bash
 bash create_container_client.sh
 # 查看容器是否创建成功
-docker ps
+docker ps -a
 ```
 
 
