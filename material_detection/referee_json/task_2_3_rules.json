@@ -1,0 +1,102 @@
+{
+
+    "successfully_moved_to_shelf_zone": {
+        "phase" : "Starting",
+        "description" : "Robot successfully navigated to Shelf Arrangement Zone",
+        "score": 1,
+        "type" : "in_2d_range",
+        "range" : {
+            "x" : [-0.8, -0.3],
+            "y" : [0, 0.9]
+        }
+    },
+
+
+    "successfully_touch_brownbox" : {
+        "phase" : "Object Grasping",
+        "description" : "Successful touch of cotton bale ",
+        "score": 19,
+        "state_score": 1,
+        "type" : "touch",
+        "prerequisite" : [
+            "successfully_moved_to_shelf_zone"
+        ],
+        "object1_name" : "brownbox"
+    },
+
+
+    "successfully_picked_up_brownbox" : {
+        "phase" : "Object Grasping",
+        "description" : "Successful grab of cotton bale",
+        "score": 9,
+        "state_score": 1,
+        "type" : "pick_up_dual",
+        "prerequisite" : [
+            "successfully_touch_brownbox"
+        ],
+        "object1_name" : "brownbox"
+    },
+
+
+    "successfully_moved_to_table_zone": {
+        "phase" : "Collection",
+        "description" : "Robot successfully navigated to table Zone",
+        "score": 1,
+        "type" : "in_2d_range",
+        "prerequisite" : [
+            "successfully_picked_up_brownbox"
+        ],
+        "range" : {
+            "x" : [0.1, 1.25],
+            "y" : [-1.162, 0.816]
+        }
+    },
+
+
+    "successfully_placed_brownbox_on_table" : {
+        "phase" : "Object Grasping",
+        "description" : "Successful placement of cotton bale on table",
+        "score": 19,
+        "state_score": 1,
+        "type" : "in_3d_range",
+        "prerequisite" : [
+            "successfully_moved_to_table_zone"
+        ],
+        "object1_name" : "brownbox",
+        "object2_name" : "table",
+        "range" : {
+        "x" : [0.7, 1.25],
+        "y" : [-0.85, -1.25],
+        "z" : [0.74, 0.77]
+        }
+    },
+
+
+    "successfully_moved_to_end_zone": {
+        "phase" : "Collection",
+        "description" : "Robot successfully navigated to end Zone",
+        "score": 1,
+        "type" : "in_2d_range",
+        "prerequisite" : [
+            "successfully_placed_brownbox_on_table"
+        ],
+        "range" : {
+            "x" : [-2, -0.63],
+            "y" : [-1.152, -0.141]
+        }
+    },
+
+
+    "no_collision_during_whole_movement": {
+        "phase" : "Ending",
+        "description" : "No collision incidents during navigation to end zone",
+        "score": 10,
+        "type" : "no_collision",
+        "until" : "successfully_moved_to_end_zone",
+        "collision_group" : [
+            [["agv_link", "lft_finger_left_link", "lft_finger_right_link","lft_arm_link1", "lft_arm_link2", "lft_arm_link3","lft_arm_link4", "lft_arm_link5", "lft_arm_link6", "rgt_finger_left_link", "rgt_finger_right_link","rgt_arm_link1",  "rgt_arm_link2",  "rgt_arm_link3",  "rgt_arm_link4",  "rgt_arm_link5",  "rgt_arm_link6"], ["table", "front_wall", "back_wall", "left_wall", "right_wall", "cabinet", "yellowbox", "pinkbox", "toolbox", "blue"]]
+        ]
+    }
+
+
+}
