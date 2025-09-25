@@ -129,6 +129,14 @@ docker images | grep material_detection_client
 
 ```
 
+
+**注意：如果您使用的是50系显卡（如RTX 5090等），请使用专门优化的镜像：**
+```bash
+# 50系显卡专用镜像（国内仓库）
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_client:release_cuda128_v0
+```
+
+
 ### 2. 创建Docker容器
 打开scripts/create_container_client.sh并修改镜像 和 tag名称，tagname需要修改为实际的最新tag，如按照上面的版本tagname改为release_v0，如果是从国内镜像源拉取，第15行的xmartev/需要修改为国内镜像源名称，例如crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/
 
