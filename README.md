@@ -75,18 +75,27 @@ docker hub是一个类似于github的平台，只不过不用来存放代码，�
 
 ```bash
 # 从docker hub拉取
-docker pull xmartev/block_challenge_server:release_v0
+docker pull xmartev/material_detection_server:release_v0
 
 # 如果因为网络问题拉取失败，提供了国内的镜像仓库
-docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/block_challenge_server:release_v0
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:release_v0
 
-# 查看是否成功获取 xmartev/block_challenge_server 镜像，如果有输出则说明成功拉取到本地
-docker images | grep block_challenge_server
+# 查看是否成功获取 xmartev/material_detection_server 镜像，如果有输出则说明成功拉取到本地
+docker images | grep material_detection_server
+```
+
+**注意：如果您使用的是50系显卡（如RTX 5090等），请使用专门优化的镜像：**
+```bash
+# 50系显卡专用镜像
+docker pull xmartev/material_detection_server:release_cuda128_v0
+
+# 国内镜像仓库
+docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:release_cuda128_v0
 ```
 
 ### 6. Run server container
 
-打开[`scripts/create_container_server.sh`](scripts/create_container_server.sh)并修改镜像 和 tag名称（tag名称以最新的版本为准,如按照上面的版本tagname改为release_v0），如果使用国内镜像源拉取，则需要将第15行的`xmartev/`修改成`crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/`
+打开[`scripts/create_container_server.sh`](scripts/create_container_server.sh)并修改镜像 和 tag名称（tag名称以最新的版本为准,如按照上面的版本tag_name改为release_v0，50系显卡用户请使用release_cuda128_v0），如果使用国内镜像源拉取，则需要将第15行的`xmartev/`修改成`crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/`
 
 ![alt text](doc/assets/cc.png)
 
@@ -320,7 +329,7 @@ docker push <阿里云ACR地址>:<tag_name>
 
 ### 3. 开发比赛任务
 
-根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag,这里第三行的block_challenge_client是container_id
+根据private repo和tag名字，修改create_container_client.sh里的镜像名和tag,这里第三行的material_detection_client是container_id
 
 ![image-20250220181043385](doc/assets/bash.png)
 
