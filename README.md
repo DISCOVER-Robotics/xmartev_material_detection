@@ -86,10 +86,7 @@ docker images | grep material_detection_server
 
 **注意：如果您使用的是50系显卡（如RTX 5090等），请使用专门优化的镜像：**
 ```bash
-# 50系显卡专用镜像
-docker pull xmartev/material_detection_server:release_cuda128_v0
-
-# 国内镜像仓库
+# 50系显卡专用镜像（国内仓库）
 docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:release_cuda128_v0
 ```
 
