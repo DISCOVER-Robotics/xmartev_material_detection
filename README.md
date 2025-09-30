@@ -272,7 +272,7 @@ Published topics:
  	# 控制mmk2升降移动
 ```
 
-关于baseline进一步的说明，请参考
+关于baseline进一步的说明，请参考[baseline说明](doc/baseline.md)。
 
 
 ## 完成开发后上传client镜像
