@@ -277,7 +277,12 @@ Published topics:
 
 ## 完成开发后上传client镜像
 
-选手在client中开发算法，开发完成后打包上传至阿里云ACR服务，由官方拉取后进行测试，测试使用电脑配置为：
+选手在client镜像中开发算法, 需要将相应任务的执行脚本命名为 `client_task_1.py` 和 `client_task_2.py`.
+<!-- ```
+python client_task_1.py
+python client_task_2.py
+``` -->
+开发完成后打包上传至阿里云ACR服务，由官方拉取后进行测试，测试使用电脑配置为：
 
 ```
 cpu : 13th Gen Intel Core i7 13700KF x24
