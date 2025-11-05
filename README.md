@@ -277,7 +277,7 @@ Published topics:
 
 ## 完成开发后上传client镜像
 
-选手在client镜像中开发算法, 需要将相应任务的执行脚本命名为 `client_task_1.py` 和 `client_task_2.py`.
+选手在client镜像中开发算法, 需要将相应任务的执行脚本命名为 `client_task_1.py` 和 `client_task_2.py`. 裁判会运行这两个脚本来评分。
 <!-- ```
 python client_task_1.py
 python client_task_2.py
