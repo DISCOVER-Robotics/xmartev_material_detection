@@ -74,7 +74,7 @@ docker hub是一个类似于github的平台，只不过不用来存放代码，�
 
 tag需要更改为最新版
 
-!!!server端最新tag名称：release_v1.1.1或release_cuda128_v1.1.1
+!!!server端最新tag名称：[`release_v1.1.1`]或[`release_cuda128_v1.1.1`]
 
 ```bash
 # 从docker hub拉取
@@ -95,7 +95,7 @@ docker pull crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/m
 
 ### 6. Run server container
 
-!!!server端最新tag名称：release_v1.1.1或release_cuda128_v1.1.1
+!!!server端最新tag名称：[`release_v1.1.1`]或[`release_cuda128_v1.1.1`]
 
 打开[`scripts/create_container_server.sh`](scripts/create_container_server.sh)并修改镜像 和 tag名称（tag名称以最新的版本为准,如按照上面的版本tag_name改为release_v0，50系显卡用户请使用release_cuda128_v0），如果使用国内镜像源拉取，则需要将第15行的`xmartev/`修改成`crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/`
 
