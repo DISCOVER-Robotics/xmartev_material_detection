@@ -12,7 +12,7 @@ docker run -id --name material_detection_server --gpus all \
     -e NVIDIA_DRIVER_CAPABILITIES=all \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev/input:/dev/input \
-    xmartev/material_detection_server:tagname bash
+    crpi-1pzq998p9m7w0auy.cn-hangzhou.personal.cr.aliyuncs.com/xmartev/material_detection_server:release_v1.1.1 bash
 
 xhost +
 

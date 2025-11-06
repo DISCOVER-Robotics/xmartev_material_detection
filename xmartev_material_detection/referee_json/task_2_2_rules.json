@@ -12,7 +12,7 @@
     },
 
 
-    "successfully_touch_brownbox" : {
+    "successfully_touch_yellowbox" : {
         "phase" : "Object Grasping",
         "description" : "Successful touch of cotton bale ",
         "score": 19,
@@ -21,20 +21,20 @@
         "prerequisite" : [
             "successfully_moved_to_shelf_zone"
         ],
-        "object1_name" : "brownbox"
+        "object1_name" : "yellowbox"
     },
 
 
-    "successfully_picked_up_brownbox" : {
+    "successfully_picked_up_yellowbox" : {
         "phase" : "Object Grasping",
         "description" : "Successful grab of cotton bale",
         "score": 9,
         "state_score": 1,
         "type" : "pick_up_dual",
         "prerequisite" : [
-            "successfully_touch_brownbox"
+            "successfully_touch_yellowbox"
         ],
-        "object1_name" : "brownbox"
+        "object1_name" : "yellowbox"
     },
 
 
@@ -44,7 +44,7 @@
         "score": 1,
         "type" : "in_2d_range",
         "prerequisite" : [
-            "successfully_picked_up_brownbox"
+            "successfully_picked_up_yellowbox"
         ],
         "range" : {
             "x" : [0.1, 1.25],
@@ -53,7 +53,7 @@
     },
 
 
-    "successfully_placed_brownbox_on_table" : {
+    "successfully_placed_yellowbox_on_table" : {
         "phase" : "Object Grasping",
         "description" : "Successful placement of cotton bale on table",
         "score": 19,
@@ -62,12 +62,11 @@
         "prerequisite" : [
             "successfully_moved_to_table_zone"
         ],
-        "object1_name" : "brownbox",
-        "object2_name" : "table",
+        "object1_name" : "yellowbox",
         "range" : {
-        "x" : [0.7, 1.25],
-        "y" : [-0.85, -1.25],
-        "z" : [0.74, 0.77]
+        "x" : [0.745, 1.25],
+        "y" : [-0.45, 0.2],
+        "z" : [0.72, 1.1]
         }
     },
 
@@ -78,7 +77,7 @@
         "score": 1,
         "type" : "in_2d_range",
         "prerequisite" : [
-            "successfully_placed_brownbox_on_table"
+            "successfully_placed_yellowbox_on_table"
         ],
         "range" : {
             "x" : [-2, -0.63],
@@ -94,7 +93,7 @@
         "type" : "no_collision",
         "until" : "successfully_moved_to_end_zone",
         "collision_group" : [
-            [["agv_link", "lft_finger_left_link", "lft_finger_right_link","lft_arm_link1", "lft_arm_link2", "lft_arm_link3","lft_arm_link4", "lft_arm_link5", "lft_arm_link6", "rgt_finger_left_link", "rgt_finger_right_link","rgt_arm_link1",  "rgt_arm_link2",  "rgt_arm_link3",  "rgt_arm_link4",  "rgt_arm_link5",  "rgt_arm_link6"], ["table", "front_wall", "back_wall", "left_wall", "right_wall", "cabinet", "yellowbox", "pinkbox", "toolbox", "blue"]]
+            [["agv_link", "lft_finger_left_link", "lft_finger_right_link","lft_arm_link1", "lft_arm_link2", "lft_arm_link3","lft_arm_link4", "lft_arm_link5", "lft_arm_link6", "rgt_finger_left_link", "rgt_finger_right_link","rgt_arm_link1",  "rgt_arm_link2",  "rgt_arm_link3",  "rgt_arm_link4",  "rgt_arm_link5",  "rgt_arm_link6"], ["table", "front_wall", "back_wall", "left_wall", "right_wall", "cabinet", "pinkbox", "brownbox", "hat", "blue"]]
         ]
     }
 

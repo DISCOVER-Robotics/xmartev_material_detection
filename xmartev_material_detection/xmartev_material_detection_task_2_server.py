@@ -180,7 +180,7 @@ class SceneROS2Node(MMK2ROS2):
         if self.random == 1:
             task_info_msg.data = f"{r}: Take the yellowbox from the cabinet, and put it on the left side of the hat."
         if self.random == 2:
-            task_info_msg.data = f"{r}: Take the brownbox from the cabinet, and put it on the left side of the toolbox."
+            task_info_msg.data = f"{r}: Take the brownbox from the cabinet, and put it on the left side of the bluebox."
         
         print(f"{task_info_msg.data}")
 
@@ -264,7 +264,7 @@ class SceneROS2Node(MMK2ROS2):
         if self.random == 1:
             task_info_msg.data = f"{r}: Take the yellowbox from the cabinet, and put it on the left side of the hat."
         if self.random == 2:
-            task_info_msg.data = f"{r}: Take the brownbox from the cabinet, and put it on the left side of the toolbox."
+            task_info_msg.data = f"{r}: Take the brownbox from the cabinet, and put it on the left side of the bluebox."
         
 
         self.game_info_puber = self.create_publisher(String, '/xmartev_material_detection/gameinfo', 2)
