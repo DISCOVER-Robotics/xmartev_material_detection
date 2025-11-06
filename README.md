@@ -76,7 +76,6 @@ tag需要更改为最新版
 
 !!!server端最新tag名称：release_v1.1.1或release_cuda128_v1.1.1
 
-
 ```bash
 # 从docker hub拉取
 docker pull xmartev/material_detection_server:release_v0
